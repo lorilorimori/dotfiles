@@ -1,4 +1,4 @@
-# Set default shell options
+# Set default shell options and initialize Starship prompt
 # UTF-8 output encoding for compatibility with PowerShell < 7
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
@@ -10,4 +10,9 @@ try {
     Set-PSReadLineOption -EditMode Windows
 } catch {
     Write-Warning "PSReadLine configuration failed: $_"
+}
+
+# Starship prompt init (lazy check — avoids startup cost if not installed)
+if ($null -ne (Get-Command starship -ErrorAction SilentlyContinue)) {
+    try { Invoke-Expression (&starship init powershell) } catch {}
 }
