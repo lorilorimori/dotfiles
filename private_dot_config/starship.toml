@@ -1,0 +1,38 @@
+format = """
+$all\
+"""
+
+
+[directory]
+style = "fg:#ea9b2c"
+truncation_length = 8
+truncate_to_repo = false
+
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "#29dcfb"
+
+
+[git_status]
+format = '([$modified$staged$untracked$deleted]$conflicted$ahead_behind](fg:#0098ff) )'
+
+
+[character]
+success_symbol = "[❯](bold #29dcfb)"
+error_symbol = "[❯](bold #e13f00)"
+
+[status]
+style = "fg:#e13f00"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "#d9c68d"
+
+
+[nodejs]
+disabled = true
+
+
+[golang]
+disabled = true
