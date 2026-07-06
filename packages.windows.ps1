@@ -5,6 +5,7 @@ winget install Microsoft.PowerShell
 winget install Microsoft.PowerToys
 
 winget install Volta.Volta
+winget install Starship.Starship
 winget install astral-sh.uv
 
 Invoke-WebRequest `
