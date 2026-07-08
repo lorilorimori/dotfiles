@@ -8,6 +8,17 @@ winget install Volta.Volta
 winget install Starship.Starship
 winget install astral-sh.uv
 
+# completion engine
+Install-Module PSCompletions -Scope CurrentUser -Force
+Get-Module -ListAvailable -Name PSCompletions
+Import-Module PSCompletions
+# completions for specific tools
+psc add git
+# shell aliases
+psc alias add git g
+# disable update check on shell startup
+psc config enable_completions_update 0
+
 Invoke-WebRequest `
     -Uri https://aka.ms/vs/17/release.ltsc.17.8/vs_buildtools.exe `
     -OutFile ~\AppData\Local\Temp\vs_buildtools.exe
