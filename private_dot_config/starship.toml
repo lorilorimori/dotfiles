@@ -10,7 +10,7 @@ truncate_to_repo = false
 
 
 [git_branch]
-format = "[$symbol$branch]($style) "
+format = "[$branch]($style) "
 style = "#29dcfb"
 
 
