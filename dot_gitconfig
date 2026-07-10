@@ -9,4 +9,4 @@
 [init]
 	defaultBranch = master
 [core]
-	editor="/usr/bin/vim"
+	editor = vim
