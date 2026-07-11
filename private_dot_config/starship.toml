@@ -29,10 +29,6 @@ style = "fg:#e13f00"
 format = "[$duration]($style) "
 style = "#d9c68d"
 
-
-[nodejs]
+[package]
 disabled = true
 
-
-[golang]
-disabled = true
