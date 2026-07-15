@@ -9,8 +9,7 @@ Apply:
 
 ```shell
 sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply lorilorimori && ~/.local/share/chezmoi/packages.linux.sh
-
-```powershell
+# windows
 powershell.exe -ExecutionPolicy Bypass -File ".local\share\chezmoi\packages.windows.ps1"
 ```
 
