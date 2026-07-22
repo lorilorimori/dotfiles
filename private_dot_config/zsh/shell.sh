@@ -11,6 +11,10 @@ zi for \
     wait \
   zsh-users/zsh-completions
 
+# banner
+print -P "%F{39}\u2726$f"
+
+
 # OMZ completion-style
 zstyle ':completion:*' menu select
 
