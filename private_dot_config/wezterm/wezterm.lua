@@ -2,16 +2,29 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.font_size = 17.0
+-- Detect OS from target_triple
+local is_macos = wezterm.target_triple:find("darwin") ~= nil
+local is_linux = wezterm.target_triple:find("linux") ~= nil
+local is_windows = wezterm.target_triple:find("windows") ~= nil
+
+if is_macos then
+  config.font_size = 17.0
+else
+  config.font_size = 13.0
+end
 
 config.window_background_opacity = 0.89
 config.initial_rows = 22
 config.initial_cols = 70
 
--- Detect OS from target_triple
-local is_macos = wezterm.target_triple:find("darwin") ~= nil
-local is_linux = wezterm.target_triple:find("linux") ~= nil
-local is_windows = wezterm.target_triple:find("windows") ~= nil
+-- Set default shell per platform so profile loads (Starship, etc.)
+if is_windows then
+  config.default_prog = {"C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo"}
+elseif is_macos then
+  config.default_prog = {"/usr/bin/zsh"}
+elseif is_linux then
+  config.default_prog = {"/usr/bin/zsh"}
+end
 
 -- Platform-specific super key modifier
 local super_mod = "ALT"
