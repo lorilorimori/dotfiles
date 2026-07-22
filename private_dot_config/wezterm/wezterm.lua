@@ -19,9 +19,9 @@ config.initial_cols = 70
 
 -- Set default shell per platform so profile loads (Starship, etc.)
 if is_windows then
-  config.default_prog = {"C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo"}
+  config.default_prog = {"pwsh.exe", "-NoLogo"}
 elseif is_macos then
-  config.default_prog = {"/usr/bin/zsh"}
+  config.default_prog = {"zsh"}
 elseif is_linux then
   config.default_prog = {"/usr/bin/zsh"}
 end
