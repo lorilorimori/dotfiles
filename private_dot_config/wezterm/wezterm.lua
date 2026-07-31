@@ -34,12 +34,19 @@ end
 
 config.keys = {
 
-  -- New tab
-  -- Ctrl /
+  -- Interrupt (Ctrl+C)
   {
     key = "c",
     mods = "CTRL",
-    action = wezterm.action.CopyTo("Clipboard"),
+    action = wezterm.action.SendString("\x03"),
+  },
+
+  -- New tab
+  -- Ctrl /
+  {
+    key = "/",
+    mods = "CTRL|" .. super_mod,
+    action = wezterm.action.SpawnTab("CurrentPaneDomain"),
   },
   {
     key = "v",
