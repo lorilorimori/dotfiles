@@ -32,12 +32,18 @@ if is_macos then
   super_mod = "CMD"
 end
 
+-- Copy/paste modifier: CTRL on Windows, super_mod elsewhere
+local copy_paste_mod = "CTRL"
+if not is_windows then
+  copy_paste_mod = super_mod
+end
+
 config.keys = {
 
   -- Interrupt (Ctrl+C)
   {
     key = "c",
-    mods = "CTRL",
+    mods = "CTRL|SHIFT",
     action = wezterm.action.SendString("\x03"),
   },
 
@@ -48,15 +54,18 @@ config.keys = {
     mods = "CTRL|" .. super_mod,
     action = wezterm.action.SpawnTab("CurrentPaneDomain"),
   },
+
+  -- copy
+  {
+    key = "c",
+    mods = copy_paste_mod,
+    action = wezterm.action.CopyTo('Clipboard'),
+  },
+  -- paste
   {
     key = "v",
-    mods = "CTRL",
-    action = wezterm.action.PasteFrom("Clipboard"),
-  },
-  {
-    key = "/",
-    mods = "CTRL|" .. super_mod,
-    action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+    mods = copy_paste_mod,
+    action = wezterm.action.PasteFrom('Clipboard'),
   },
 
   -- Split panes
