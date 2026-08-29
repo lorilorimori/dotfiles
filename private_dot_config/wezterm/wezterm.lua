@@ -38,6 +38,8 @@ if not is_windows then
   copy_paste_mod = super_mod
 end
 
+config.enable_scroll_bar = true
+
 config.keys = {
 
   -- Interrupt (Ctrl+C)
