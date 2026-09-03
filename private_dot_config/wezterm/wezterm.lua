@@ -43,7 +43,7 @@ config.keys = {
   -- Interrupt (Ctrl+C)
   {
     key = "c",
-    mods = "CTRL|SHIFT",
+    mods = "CTRL|ALT",
     action = wezterm.action.SendString("\x03"),
   },
 
