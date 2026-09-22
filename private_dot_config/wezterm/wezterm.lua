@@ -17,6 +17,8 @@ config.window_background_opacity = 0.89
 config.initial_rows = 22
 config.initial_cols = 70
 
+config.window_close_confirmation = 'NeverPrompt'
+
 -- Set default shell per platform so profile loads (Starship, etc.)
 if is_windows then
   config.default_prog = {"pwsh.exe", "-NoLogo"}
@@ -170,7 +172,7 @@ config.keys = {
   {
     key = "W",
     mods = "SHIFT|" .. super_mod,
-    action = wezterm.action.CloseCurrentPane({confirm=true}),
+    action = wezterm.action.CloseCurrentPane({confirm=false}),
   },
 
 }
