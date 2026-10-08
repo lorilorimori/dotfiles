@@ -10,6 +10,7 @@ PKGS_REMOVE="
 # common across systems packages
 PKGS_TOOLS_BASE="
   flatpak
+  wl-clipboard
   zsh
   git
   curl
