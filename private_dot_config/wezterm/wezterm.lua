@@ -40,6 +40,8 @@ if not is_windows then
   copy_paste_mod = super_mod
 end
 
+config.alternate_buffer_wheel_scroll_speed = 1
+
 config.enable_scroll_bar = true
 
 config.keys = {
@@ -159,12 +161,12 @@ config.keys = {
   {
     key = "UpArrow",
     mods = "SHIFT|" .. super_mod,
-    action = wezterm.action.ScrollByPage(-1),
+    action = wezterm.action.ScrollByLine(-1),
   },
   {
     key = "DownArrow",
     mods = "SHIFT|" .. super_mod,
-    action = wezterm.action.ScrollByPage(1),
+    action = wezterm.action.ScrollByLine(1),
   },
 
   -- Close pane
