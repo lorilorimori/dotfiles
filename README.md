@@ -9,10 +9,15 @@ Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi)
 Apply:
 
 ```shell
-sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply lorilorimori && ~/.local/share/chezmoi/packages.linux.sh
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- \
+  init \
+    --apply lorilorimori \
+&& ~/.local/share/chezmoi/packages.linux.sh
 ```
 
 ```powershell
-powershell.exe -ExecutionPolicy Bypass -File ".local\share\chezmoi\packages.windows.ps1"
+powershell.exe `
+  -ExecutionPolicy Bypass `
+  -File ".local\share\chezmoi\packages.windows.ps1"
 ```
 
