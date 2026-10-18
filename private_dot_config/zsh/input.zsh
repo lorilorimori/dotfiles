@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # omitted: / ( ) _ - =
 # added: " '
 export WORDCHARS="*?.[]~&;!#$%^{}<>'\""

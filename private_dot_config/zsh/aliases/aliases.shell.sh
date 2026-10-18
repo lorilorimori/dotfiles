@@ -1,5 +1,3 @@
-#!/bin/sh
-
 alias tx='tar --extract --file'
 alias dt='diff --text --recursive --color'
 alias wget-any='wget \

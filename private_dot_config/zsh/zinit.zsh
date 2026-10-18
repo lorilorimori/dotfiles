@@ -1,5 +1,3 @@
-#!/usr/bin/zsh
-
 # zinit installer with fixes
 # https://github.com/zdharma-continuum/zinit/issues/558#issuecomment-1741890973
 typeset -gAH ZINIT=(HOME_DIR "$HOME/.local/share/zinit" COMPINIT_OPTS '-D -i -u -C -w')

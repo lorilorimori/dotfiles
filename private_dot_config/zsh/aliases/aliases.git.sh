@@ -1,5 +1,3 @@
-#!/bin/sh
-
 alias g='git'
 alias ggraph='git log --oneline --all --graph --decorate'
 # git logs cool-looking tree of every commit with metadata (author and stuff)
