@@ -1,19 +1,41 @@
-keybind = alt+t=new_tab
+#
+
+# tabs
+keybind = ctrl+alt+/=new_tab
 keybind = alt+shift+left=previous_tab
 keybind = alt+shift+right=next_tab
 
-keybind = alt+up=goto_split:top
-keybind = alt+down=goto_split:bottom
+# splits
+keybind = ctrl+alt+left=new_split:left
+keybind = ctrl+alt+right=new_split:right
+keybind = ctrl+alt+up=new_split:up
+keybind = ctrl+alt+down=new_split:down
+
+# move across panes
 keybind = alt+left=goto_split:left
 keybind = alt+right=goto_split:right
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
 
-keybind = alt+ctrl+left=new_split:left
-keybind = alt+ctrl+right=new_split:right
-keybind = alt+ctrl+up=new_split:up
-keybind = alt+ctrl+down=new_split:down
+# pane resize
+keybind = ctrl+shift+left=resize_split:left,10
+keybind = ctrl+shift+right=resize_split:right,10
+keybind = ctrl+shift+up=resize_split:up,18
+keybind = ctrl+shift+down=resize_split:down,18
 
-keybind = ctrl+q=close_surface
-keybind = alt+q=close_surface
+# scrollback
+keybind = alt+shift+up=scroll_page_lines:-1
+keybind = alt+shift+down=scroll_page_lines:1
+
+# copy / paste
+keybind = alt+c=copy_to_clipboard
+keybind = alt+v=paste_from_clipboard
+
+# send SIGINT
+keybind = ctrl+alt+c=text:\x03
+
+# close pane or tab if it contains only 1 pane
+keybind = alt+shift+w=close_surface
 
 shell-integration = zsh
 shell-integration-features = no-cursor,no-sudo,title
@@ -21,13 +43,9 @@ shell-integration-features = no-cursor,no-sudo,title
 window-height = 20
 window-width = 66
 
-keybind = ctrl+v=paste_from_clipboard
-keybind = alt+v=paste_from_clipboard
-#keybind = unconsumed:ctrl+c=copy_to_clipboard
-keybind = alt+c=copy_to_clipboard
-keybind = unconsumed:ctrl+shift+d=ignore
+confirm-close-surface = false
 
-confirm-close-surface=false
+# background = #181818
+background = #000
+background-opacity = 0.89
 
-background = #181818
-unfocused-split-opacity = 0.9
