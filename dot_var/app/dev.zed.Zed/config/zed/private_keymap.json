@@ -80,7 +80,7 @@
       "ctrl-delete": "editor::DeleteToNextWordEnd",
       "shift-delete": "editor::Cut",
       "ctrl-insert": "editor::Copy",
-      "shift-insert": "editor::Paste",
+      "alt-v": "editor::Paste",
       "ctrl-y": "editor::Redo",
       "ctrl-z": "editor::Undo",
       "ctrl-shift-z": "editor::Redo",
@@ -509,4 +509,28 @@
       "ctrl-shift-space": "terminal::ToggleViMode",
     },
   },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-v": "terminal::Paste"
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "shift-insert": "terminal::Paste"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-c": "terminal::Copy"
+    }
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-insert": "terminal::Copy"
+    }
+  }
 ]
