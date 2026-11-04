@@ -84,13 +84,17 @@ chsh --shell /usr/bin/zsh
 # we run it here
 zsh -f -c 'source "$HOME/.zshrc"'
 
+# deps
 ~/.cargo/bin/cargo install --locked $PKGS_RUST_LOCKED
 sudo apt install $PKGS_VT
 sudo apt install $PKGS_MISC
 
+# js ecosystem management
 volta install node@lts
 volta install npm
+volta install bun
 
+# misc
 $CURL_ANY \
   https://github.com/sj14/epoch/releases/download/v0.2.2/epoch_0.2.2_linux_amd64 \
   --output "$LOCAL_BIN/epoch"
